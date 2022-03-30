@@ -15,7 +15,7 @@ detection:
     OriginalFileName: '*PasswordDump.exe'
   condition: (SELECTION_1 and (SELECTION_2 or SELECTION_3 or SELECTION_4))
 falsepositives:
-- unlikely
+- Unlikely
 id: 7679d464-4f74-45e2-9e01-ac66c5eb041a
 level: critical
 logsource:

@@ -17,7 +17,7 @@ detection:
     - '*net config*'
   condition: (SELECTION_1 and SELECTION_2)
 falsepositives:
-- administrator, hotline ask to user
+- Administrator, hotline ask to user
 id: a29c1813-ab1f-4dde-b489-330b952e91ae
 level: low
 logsource:

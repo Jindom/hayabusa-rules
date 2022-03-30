@@ -6,69 +6,82 @@ date: 2017/03/05
 description: Detects suspicious PowerShell invocation command parameters
 detection:
   SELECTION_1:
-  - ' -w '
+  - -nop
   SELECTION_10:
-  - bypass
+  - ' -c '
   SELECTION_11:
-  - -Enc
+  - iex
   SELECTION_12:
-  - powershell
+  - New-Object
   SELECTION_13:
-  - reg
+  - ' -w '
   SELECTION_14:
-  - add
+  - hidden
   SELECTION_15:
-  - HKCU\software\microsoft\windows\currentversion\run
+  - -ep
   SELECTION_16:
   - bypass
   SELECTION_17:
-  - -noprofile
+  - -Enc
   SELECTION_18:
-  - -windowstyle
+  - powershell
   SELECTION_19:
-  - hidden
+  - reg
   SELECTION_2:
-  - hidden
+  - ' -w '
   SELECTION_20:
-  - new-object
+  - add
   SELECTION_21:
-  - system.net.webclient
+  - HKCU\software\microsoft\windows\currentversion\run
   SELECTION_22:
-  - .download
+  - bypass
   SELECTION_23:
-  - iex
+  - -noprofile
   SELECTION_24:
-  - New-Object
+  - -windowstyle
   SELECTION_25:
-  - Net.WebClient
+  - hidden
   SELECTION_26:
-  - .Download
+  - new-object
   SELECTION_27:
+  - system.net.webclient
+  SELECTION_28:
+  - .download
+  SELECTION_29:
+  - iex
+  SELECTION_3:
+  - hidden
+  SELECTION_30:
+  - New-Object
+  SELECTION_31:
+  - Net.WebClient
+  SELECTION_32:
+  - .Download
+  SELECTION_33:
   - (New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1
   - (New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')
   - Write-ChocolateyWarning
-  SELECTION_3:
-  - -nop
   SELECTION_4:
   - ' -c '
   SELECTION_5:
   - '[Convert]::FromBase64String'
   SELECTION_6:
-  - -noni
+  - ' -w '
   SELECTION_7:
-  - iex
+  - hidden
   SELECTION_8:
-  - New-Object
+  - -noni
   SELECTION_9:
-  - -ep
-  condition: (((((SELECTION_1 and SELECTION_2 and ((SELECTION_3 and SELECTION_4 and
-    ((SELECTION_6 and SELECTION_7 and SELECTION_8) or SELECTION_5)) or (SELECTION_9
-    and SELECTION_10 and SELECTION_11))) or (SELECTION_12 and SELECTION_13 and SELECTION_14
-    and SELECTION_15)) or (SELECTION_16 and SELECTION_17 and SELECTION_18 and SELECTION_19
-    and SELECTION_20 and SELECTION_21 and SELECTION_22)) or (SELECTION_23 and SELECTION_24
-    and SELECTION_25 and SELECTION_26)) and  not ((SELECTION_27)))
+  - -nop
+  condition: (((((((SELECTION_1 and SELECTION_2 and SELECTION_3 and SELECTION_4 and
+    SELECTION_5) or (SELECTION_6 and SELECTION_7 and SELECTION_8 and SELECTION_9 and
+    SELECTION_10 and SELECTION_11 and SELECTION_12)) or (SELECTION_13 and SELECTION_14
+    and SELECTION_15 and SELECTION_16 and SELECTION_17)) or (SELECTION_18 and SELECTION_19
+    and SELECTION_20 and SELECTION_21)) or (SELECTION_22 and SELECTION_23 and SELECTION_24
+    and SELECTION_25 and SELECTION_26 and SELECTION_27 and SELECTION_28)) or (SELECTION_29
+    and SELECTION_30 and SELECTION_31 and SELECTION_32)) and  not ((SELECTION_33)))
 falsepositives:
-- Penetration tests
+- Unknown
 id: fce5f582-cc00-41e1-941a-c6fabf0fdb8c
 level: high
 logsource:

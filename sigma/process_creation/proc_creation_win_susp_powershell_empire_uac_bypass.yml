@@ -13,7 +13,7 @@ detection:
     - '* -NoP -NonI -c $x=$((gp HKCU:Software\\Microsoft\\Windows Update).Update);*'
   condition: (SELECTION_1 and SELECTION_2)
 falsepositives:
-- unknown
+- Unknown
 fields:
 - CommandLine
 - ParentCommandLine

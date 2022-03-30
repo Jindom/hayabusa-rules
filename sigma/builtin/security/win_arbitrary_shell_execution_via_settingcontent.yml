@@ -13,7 +13,7 @@ detection:
     FilePath: '*immersivecontrolpanel*'
   condition: (SELECTION_1 and  not (SELECTION_2))
 falsepositives:
-- unknown
+- Unknown
 fields:
 - ParentProcess
 - CommandLine

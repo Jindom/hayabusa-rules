@@ -14,7 +14,7 @@ detection:
     ParentImage: '*\wmiprvse.exe'
   condition: (SELECTION_1 and SELECTION_2 and SELECTION_3)
 falsepositives:
-- unknown
+- Unknown
 id: 18cf6cf0-39b0-4c22-9593-e244bdc9a2d4
 level: critical
 logsource:

@@ -15,7 +15,7 @@ detection:
     TargetObject: '*\SYSTEM\CurrentControlSet\services\null\Instance*'
   condition: ((SELECTION_1 or SELECTION_2 or SELECTION_3) and SELECTION_4)
 falsepositives:
-- unknown
+- Unknown
 fields:
 - EventID
 - CommandLine
